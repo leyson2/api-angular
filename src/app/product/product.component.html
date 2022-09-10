@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem; margin: 5px">
+  <img class="card-img-top" alt="Card image cap" *ngIf="product.images.length > 0" src="{{ product.images[0] }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.title }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+  </div>
+  <div class="card-footer">
+    <ul class="" style="display:flex; justify-content:space-between; list-style:none">
+      <li class="list-group-item">
+        <span>${{ product.price }}</span>
+      </li>
+      <li>
+        <a href="#" class="btn btn-primary" (click)="onShowDetails()">ver detalles</a>
+      </li>
+    </ul>
+  </div>
+</div>

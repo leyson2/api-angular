@@ -1,0 +1,29 @@
+<mat-drawer-container class="example-container" autosize>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" style="display:flex">
+        <app-product [product]="product" *ngFor="let product of products" (showDetails)="onShowDetails($event)"></app-product>
+      </div>
+    </div>
+  </div>
+  <mat-drawer #drawer class="example-sidenav" mode="side" [(opened)]="opened">
+    <div class="card" style="width: 18rem; margin: 5px">
+      <img class="card-img-top" alt="Card image cap" *ngIf="productSelected.images.length > 0" src="{{ productSelected.images[0] }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ productSelected.title }}</h5>
+        <p class="card-text">{{ productSelected.description }}</p>
+      </div>
+      <div class="card-footer">
+        <ul class="" style="display:flex; justify-content:space-between; list-style:none">
+          <li class="list-group-item">
+            <span>${{ productSelected.price }}</span>
+          </li>
+          <li>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </mat-drawer>
+
+</mat-drawer-container>
