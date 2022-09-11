@@ -15,3 +15,11 @@ export interface IProduct {
   description: string,
   category: ICategory,
 }
+
+export interface ICreateProduct extends Omit<IProduct, 'id' | 'category'> {
+  categoryId: number,
+}
+
+export interface IUpdateProduct extends Partial<ICreateProduct>{
+
+}

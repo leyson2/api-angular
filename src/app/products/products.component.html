@@ -1,7 +1,13 @@
 <mat-drawer-container class="example-container" autosize>
   <div class="container">
     <div class="row">
+
       <div class="col-md-4" style="display:flex">
+        <div class="col-md-4">
+          <button class="btn btn-success" (click)="createProduct()">Crear</button>
+          <button class="btn btn-secondary" (click)="updateProduct()">Update</button>
+          <button class="btn btn-danger" (click)="deleteProduct()">Delete</button>
+        </div>
         <app-product [product]="product" *ngFor="let product of products" (showDetails)="onShowDetails($event)"></app-product>
       </div>
     </div>
